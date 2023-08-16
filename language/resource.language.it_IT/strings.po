@@ -2208,3 +2208,8 @@ msgstr "Provider"
 msgctxt "#31416"
 msgid "Media type"
 msgstr "Tipo di Media"
+
+#: /xml/DialogButtonMenu.xml
+msgctxt "#31417"
+msgid "Turn off the TV"
+msgstr "Spegni la televisione"
