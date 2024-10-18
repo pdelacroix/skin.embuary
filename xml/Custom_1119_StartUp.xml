@@ -116,7 +116,7 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<pagecontrol>3000</pagecontrol>
-						<label>$LOCALIZE[31092][CR][CR][COLOR $VAR[AccentColor]]• $LOCALIZE[31359][CR]• $LOCALIZE[31360][CR]• $LOCALIZE[31361][CR]• $LOCALIZE[31362][CR]• $LOCALIZE[31312][/COLOR][CR][CR]$LOCALIZE[31363]</label>
+						<label>$LOCALIZE[31092][CR][CR][COLOR $VAR[AccentColor]]• $LOCALIZE[31361][CR]• $LOCALIZE[31362][CR]• $LOCALIZE[31312][/COLOR][CR][CR]$LOCALIZE[31363]</label>
 					</control>
 					<!-- buttons -->
 					<control type="grouplist" id="100">
@@ -130,8 +130,6 @@
 						<control type="button" id="101">
 							<include>DarkGreyButton</include>
 							<label>$LOCALIZE[31093]</label>
-							<onclick condition="System.GetBool(filelists.showparentdiritems)">RunScript(script.embuary.helper,action=togglekodisetting,setting=filelists.showparentdiritems)</onclick>
-							<onclick condition="System.GetBool(input.enablemouse)">RunScript(script.embuary.helper,action=togglekodisetting,setting=input.enablemouse)</onclick>
 							<onclick condition="System.HasAddon(resource.uisounds.embuary)">RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.soundskin,value=resource.uisounds.embuary)</onclick>
 							<onclick>RunScript(script.embuary.helper,action=toggleaddons,addonid=script.module.metadatautils+script.skin.helper.service+script.skin.helper.widgets+script.skin.helper.backgrounds,enable=false)</onclick>
 							<onclick>RunScript(script.embuary.helper,action=setkodisetting,setting=videolibrary.tvshowsselectfirstunwatcheditem,value=1)</onclick>
