@@ -5,6 +5,16 @@
 	<onload condition="VideoPlayer.Content(livetv) + !PVR.CanRecordPlayingChannel">SetFocus(604)</onload>
 	<include>PropertyIncludes</include>
 	<controls>
+		<control type="button">
+			<description>background close area</description>
+			<left>0</left>
+			<top>0</top>
+			<height>100%</height>
+			<width>100%</width>
+			<texturefocus />
+			<texturenofocus />
+			<onclick>close</onclick>
+		</control>
 		<!--Player Controls-->
 		<control type="group" id="1">
 			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(shutdownmenu)</visible>
