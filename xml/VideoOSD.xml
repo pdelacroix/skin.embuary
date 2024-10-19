@@ -15,6 +15,45 @@
 			<texturenofocus />
 			<onclick>close</onclick>
 		</control>
+		<!--Progress seeker-->
+		<control type="group" id="500">
+			<height>50</height>
+			<left>349</left>
+			<right>149</right>
+			<bottom>57</bottom>
+			<control type="button" id="501">
+				<include>HiddenObject</include>
+				<onup>close</onup>
+				<ondown>1</ondown>
+				<onfocus>SetProperty(SeekerFocus,1)</onfocus>
+				<onunfocus>ClearProperty(SeekerFocus)</onunfocus>
+				<onleft>StepBack</onleft>
+				<onright condition="!Player.Paused">StepForward</onright>
+				<onright condition="Player.Paused">PlayerControl(FrameAdvance(1))</onright>
+			</control>
+			<control type="slider" id="88">
+				<height>16</height>
+				<texturesliderbar colordiffuse="00FFFFFF">views/player/nib_bubble.png</texturesliderbar>
+				<textureslidernib colordiffuse="00FFFFFF">views/player/nib_bubble.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[PlayerAccentColor]">views/player/nib_bubble.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<onup>close</onup>
+				<ondown>1</ondown>
+				<action>seek</action>
+				<visible>!Control.HasFocus(501) + !VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="slider">
+				<height>16</height>
+				<texturesliderbar colordiffuse="00FFFFFF">views/player/nib_bubble.png</texturesliderbar>
+				<textureslidernib colordiffuse="00FFFFFF">views/player/nib_bubble.png</textureslidernib>
+				<textureslidernibfocus colordiffuse="$VAR[PlayerAccentColor]">views/player/nib_bubble.png</textureslidernibfocus>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<onup>close</onup>
+				<ondown>1</ondown>
+				<action>pvr.seek</action>
+				<visible>!Control.HasFocus(501) + VideoPlayer.Content(LiveTV)</visible>
+			</control>
+		</control>
 		<!--Player Controls-->
 		<control type="group" id="1">
 			<visible>!Window.IsVisible(sliderdialog) + !Window.IsVisible(shutdownmenu)</visible>
@@ -27,6 +66,7 @@
 				<right>20</right>
 				<itemgap>5</itemgap>
 				<onright>614</onright>
+				<onup>501</onup>
 				<onleft>noop</onleft>
 				<control type="button" id="601">
 					<include content="PlayerButtons">
@@ -36,6 +76,7 @@
 					<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Integer.IsGreater(Playlist.Length(music),1) | Player.SeekEnabled</visible>
 				</control>
 				<control type="button" id="602">
+				<onup>501</onup>
 					<include content="PlayerButtons">
 						<param name="type" value="rewind"/>
 					</include>

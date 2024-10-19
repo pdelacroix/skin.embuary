@@ -12,7 +12,7 @@
 			<animation effect="slide" time="0" start="0,0" end="0,-60" condition="Window.IsVisible(videoosd)">Conditional</animation>
 			<!-- Seekbar nib -->
 			<control type="slider" id="401">
-				<visible>Player.Forwarding | Player.Rewinding | $EXP[PlayerSeek]</visible>
+				<visible>Player.Forwarding | Player.Rewinding | $EXP[PlayerSeek] | !String.IsEmpty(Window(videoosd).Property(SeekerFocus))</visible>
 				<visible>!VideoPlayer.HasEpg</visible>
 				<bottom>39</bottom>
 				<left>349</left>
@@ -24,7 +24,7 @@
 				<textureslidernibfocus colordiffuse="$VAR[PlayerAccentColor]">views/player/nib_bubble.png</textureslidernibfocus>
 			</control>
 			<control type="slider" id="402">
-				<visible>Player.Forwarding | Player.Rewinding | $EXP[PlayerSeek]</visible>
+				<visible>Player.Forwarding | Player.Rewinding | $EXP[PlayerSeek] | !String.IsEmpty(Window(videoosd).Property(SeekerFocus))</visible>
 				<visible>VideoPlayer.HasEpg</visible>
 				<bottom>39</bottom>
 				<left>349</left>
