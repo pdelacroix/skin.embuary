@@ -1,3 +1,8 @@
+[B]Version 21.1.0[/B]
+- Fix screen calibration window
+- Improve select dialog (used for instance to choose subtitles) so it can be
+used with an arbitrary number of items, has mouse support and a scroll bar
+
 [B]Version 21.0.0[/B]
 - Compatibility with Kodi 21 (Omega) (still missing new color picker and updated
 screen calibration window)
@@ -6,6 +11,7 @@ screen calibration window)
 - Implement new favourites window
 - Hide controls when clicking on fullscreen player
 - Make progress bar clickable and focusable
+
 
 [B]Version 18.8.8[/B]
 - Added support for new Artist Slideshow version

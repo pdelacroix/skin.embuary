@@ -2,6 +2,8 @@
 
 Embuary is based on the web UI of Emby and has been developed for Emby-For-kodi users, but it doesn't require Emby at all and will also work with a regular Kodi setup.
 
+This is a fork of Sualfred's awesome work, intended for compatibility with recent Kodi versions and mouse support.
+
 ## Installation
 
 You can use [this repository](https://github.com/pdelacroix/kodi-repo?tab=readme-ov-file#installation).

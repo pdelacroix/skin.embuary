@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.embuary" version="21.0.0" name="Embuary" provider-name="pdelacroix">
+<addon id="skin.embuary" version="21.1.0" name="Embuary" provider-name="pdelacroix">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 		<import addon="script.embuary.helper" version="1.3.6"/>
