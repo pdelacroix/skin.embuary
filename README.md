@@ -1,7 +1,13 @@
 # skin.embuary
+
 Embuary is based on the web UI of Emby and has been developed for Emby-For-kodi users, but it doesn't require Emby at all and will also work with a regular Kodi setup.
 
-# License
+## Installation
+
+You can use [this repository](https://github.com/pdelacroix/kodi-repo?tab=readme-ov-file#installation).
+
+## License
+
 This work has been released under CC by-nc-nd 4.0.
 
 You are allowed to:
