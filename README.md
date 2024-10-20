@@ -1,10 +1,6 @@
 # skin.embuary
 Embuary is based on the web UI of Emby and has been developed for Emby-For-kodi users, but it doesn't require Emby at all and will also work with a regular Kodi setup.
 
-# Terms of use
-With the installation of the skin you agree that you don't use it in combination with blacklisted and illegal Kodi add-ons.
-I'm not associated with any available build and I won't give any support to blacklisted, banned or illegal third party addons.
-
 # License
 This work has been released under CC by-nc-nd 4.0.
 
