@@ -10,20 +10,6 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(3)</visible>
-				<control type="list" id="3">
-					<top>-10</top>
-					<left>-10</left>
-					<width>1</width>
-					<height>750</height>
-					<pagecontrol>17</pagecontrol>
-					<onup>noop</onup>
-					<onleft>100</onleft>
-					<onright>100</onright>
-					<ondown>100</ondown>
-					<scrolltime>0</scrolltime>
-					<itemlayout height="50"/>
-					<focusedlayout height="50"/>
-				</control>
 				<include content="DiffuseMask">
 					<param name="visible">!VideoPlayer.IsFullscreen + !Window.IsVisible(1113)</param>
 				</include>
@@ -76,51 +62,73 @@
 								<label>$INFO[Control.GetLabel(1)]</label>
 							</control>
 						</control>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="0"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="1"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="2"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="3"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="4"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="5"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="6"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="7"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="8"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="9"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="10"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="11"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="12"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="13"/>
-						</include>
-						<include content="SmallSelectDialogItem">
-							<param name="id" value="14"/>
-						</include>
+						<control type="group">
+							<width>100%</width>
+							<height>400</height>
+							<control type="image">
+								<width>100%</width>
+								<height>auto</height>
+								<texture border="65,10,65,10" colordiffuse="context_color">dialogs/context/middle.png</texture>
+							</control>
+							<control type="list" id="3">
+								<centerleft>50%</centerleft>
+								<width>100%</width>
+								<pagecontrol>60</pagecontrol>
+								<onup>noop</onup>
+								<onleft>100</onleft>
+								<onright condition="Integer.IsGreater(Container(3).NumItems,8)">60</onright>
+								<onright condition="!Integer.IsGreater(Numitems,3)">100</onright>
+								<ondown>100</ondown>
+								<scrolltime>200</scrolltime>
+								<itemlayout height="50" width="800">
+									<control type="label">
+										<height>45</height>
+										<centertop>50%</centertop>
+										<right>20</right>
+										<left>100</left>
+										<aligny>center</aligny>
+										<font>Med20</font>
+										<textcolor>context_textcolor</textcolor>
+										<selectedcolor>$VAR[AccentColor]</selectedcolor>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</itemlayout>
+								<focusedlayout height="50" width="800">
+									<control type="image">
+										<height>50</height>
+										<right>51</right>
+										<left>51</left>
+										<texture colordiffuse="panel_focus">common/white.jpg</texture>
+									</control>
+									<control type="label">
+										<height>45</height>
+										<centertop>50%</centertop>
+										<right>20</right>
+										<left>100</left>
+										<aligny>center</aligny>
+										<font>Med20</font>
+										<textcolor>context_textcolor_focused</textcolor>
+										<selectedcolor>$VAR[AccentColor]</selectedcolor>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="60">
+								<right>51</right>
+								<top>0</top>
+								<bottom>0</bottom>
+								<width>4</width>
+								<onup>60</onup>
+								<ondown>60</ondown>
+								<onleft>3</onleft>
+								<onright>100</onright>
+								<orientation>vertical</orientation>
+								<showonepage>false</showonepage>
+								<texturesliderbackground colordiffuse="00ffffff">common/white.jpg</texturesliderbackground>
+								<texturesliderbar colordiffuse="scrollbar_slider">common/white.jpg</texturesliderbar>
+								<texturesliderbarfocus colordiffuse="$VAR[AccentColor]">common/white.jpg</texturesliderbarfocus>
+							</control>
+						</control>
 						<control type="group">
 							<width>100%</width>
 							<height>60</height>
