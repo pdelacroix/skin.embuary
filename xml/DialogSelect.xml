@@ -63,7 +63,6 @@
 							</control>
 						</control>
 						<control type="group">
-							<width>100%</width>
 							<height>400</height>
 							<control type="image">
 								<width>100%</width>
@@ -72,7 +71,8 @@
 							</control>
 							<control type="list" id="3">
 								<centerleft>50%</centerleft>
-								<width>100%</width>
+								<left>51</left>
+								<right>51</right>
 								<pagecontrol>60</pagecontrol>
 								<onup>noop</onup>
 								<onleft>100</onleft>
@@ -85,7 +85,7 @@
 										<height>45</height>
 										<centertop>50%</centertop>
 										<right>20</right>
-										<left>100</left>
+										<left>40</left>
 										<aligny>center</aligny>
 										<font>Med20</font>
 										<textcolor>context_textcolor</textcolor>
@@ -96,15 +96,14 @@
 								<focusedlayout height="50" width="800">
 									<control type="image">
 										<height>50</height>
-										<right>51</right>
-										<left>51</left>
+										<visible>Control.HasFocus(3)</visible>
 										<texture colordiffuse="panel_focus">common/white.jpg</texture>
 									</control>
 									<control type="label">
 										<height>45</height>
 										<centertop>50%</centertop>
 										<right>20</right>
-										<left>100</left>
+										<left>40</left>
 										<aligny>center</aligny>
 										<font>Med20</font>
 										<textcolor>context_textcolor_focused</textcolor>
