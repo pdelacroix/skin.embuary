@@ -123,6 +123,10 @@
 					<description>Default Slider</description>
 					<include>SettingsButton</include>
 				</control>
+				<control type="colorbutton" id="15">
+					<description>Default ColorButton</description>
+					<include>SettingsButton</include>
+				</control>
 				<control type="image" id="11">
 					<description>separator image</description>
 					<visible>false</visible>

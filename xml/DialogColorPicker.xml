@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">6</defaultcontrol>
+	<include>PropertyIncludes</include>
+	<controls>
+		<control type="group">
+			<control type="label" id="1">
+				<include>HiddenObject</include>
+			</control>
+			<control type="group">
+				<include content="DiffuseMask">
+					<param name="visible">!VideoPlayer.IsFullscreen + !Window.IsVisible(1113)</param>
+				</include>
+				<control type="group">
+					<include>Dialog_PopupOpenClose</include>
+					<centertop>50%</centertop>
+					<centerleft>50%</centerleft>
+					<width>1020</width>
+					<control type="grouplist">
+						<orientation>vertical</orientation>
+						<width>100%</width>
+						<height>auto</height>
+						<align>center</align>
+						<itemgap>0</itemgap>
+						<onright>close</onright>
+						<onleft>close</onleft>
+						<usecontrolcoords>true</usecontrolcoords>
+						<control type="image">
+							<width>100%</width>
+							<height>61</height>
+							<texture border="65,0,65,0" colordiffuse="context_color">dialogs/context/top.png</texture>
+						</control>
+						<control type="group">
+							<visible>!String.IsEmpty(Control.GetLabel(1))</visible>
+							<width>100%</width>
+							<height>50</height>
+							<control type="image">
+								<width>100%</width>
+								<height>50</height>
+								<texture border="65,10,65,10" colordiffuse="context_color">dialogs/context/middle.png</texture>
+							</control>
+							<control type="label">
+								<width>100%</width>
+								<height>50</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textoffsetx>80</textoffsetx>
+								<font>Med22</font>
+								<textcolor>disabled</textcolor>
+								<shadowcolor>text_shadow</shadowcolor>
+								<scroll>true</scroll>
+								<label>$INFO[Control.GetLabel(1)]</label>
+							</control>
+						</control>
+						<control type="group">
+							<height>400</height>
+							<control type="image">
+								<width>100%</width>
+								<height>auto</height>
+								<texture border="65,10,65,10" colordiffuse="context_color">dialogs/context/middle.png</texture>
+							</control>
+							<!-- Color picker panel -->
+							<control type="panel" id="6">
+								<centerleft>50%</centerleft>
+								<left>68</left>
+								<right>51</right>
+								<height>400</height>
+								<onup>6</onup>
+								<ondown>6</ondown>
+								<onleft>7</onleft>
+								<onright>61</onright>
+								<orientation>vertical</orientation>
+								<pagecontrol>61</pagecontrol>
+								<viewtype label="100">icon</viewtype>
+								<itemlayout height="80" width="146">
+									<control type="group">
+										<control type="image">
+											<top>3</top>
+											<left>8</left>
+											<width>138</width>
+											<height>74</height>
+											<texture>color-back.png</texture>
+										</control>
+										<control type="image">
+											<top>3</top>
+											<left>8</left>
+											<width>138</width>
+											<height>74</height>
+											<texture border="0">common/white.jpg</texture>
+											<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+											<aspectratio>stretch</aspectratio>
+										</control>
+									</control>
+								</itemlayout>
+								<focusedlayout height="80" width="146">
+									<control type="group">
+										<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="124" center="auto">Focus</animation>
+										<control type="image">
+											<top>3</top>
+											<left>8</left>
+											<width>138</width>
+											<height>74</height>
+											<texture>color-back.png</texture>
+										</control>
+										<control type="image">
+											<top>3</top>
+											<left>8</left>
+											<width>138</width>
+											<height>74</height>
+											<texture border="0">common/white.jpg</texture>
+											<colordiffuse>$INFO[ListItem.Label2]</colordiffuse>
+											<aspectratio>stretch</aspectratio>
+										</control>
+									</control>
+								</focusedlayout>
+							</control>
+							<control type="scrollbar" id="61">
+								<right>51</right>
+								<top>0</top>
+								<bottom>0</bottom>
+								<width>4</width>
+								<onleft condition="Control.IsVisible(6)">6</onleft>
+								<onright>7</onright>
+								<orientation>vertical</orientation>
+								<texturesliderbackground colordiffuse="00ffffff">common/white.jpg</texturesliderbackground>
+								<texturesliderbar colordiffuse="scrollbar_slider">common/white.jpg</texturesliderbar>
+								<texturesliderbarfocus colordiffuse="$VAR[AccentColor]">common/white.jpg</texturesliderbarfocus>
+							</control>
+						</control>
+						<control type="group">
+							<height>50</height>
+							<control type="image">
+								<width>100%</width>
+								<height>auto</height>
+								<texture border="65,10,65,10" colordiffuse="context_color">dialogs/context/middle.png</texture>
+							</control>
+							<control type="label">
+								<centerleft>50%</centerleft>
+								<height>35</height>
+								<align>left</align>
+								<label>[COLOR button_focus]$LOCALIZE[737]: [/COLOR]$INFO[Container(6).ListItem.Label,, - ]$INFO[Container(6).ListItem.Label2,#,]</label>
+							</control>
+						</control>
+						<control type="group">
+							<width>100%</width>
+							<height>60</height>
+							<control type="image">
+								<width>100%</width>
+								<height>60</height>
+								<texture border="65,10,65,10" colordiffuse="context_color">dialogs/context/middle.png</texture>
+							</control>
+							<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<align>center</align>
+								<control type="button" id="7">
+									<include content="LightGreyButton">
+										<param name="align-left" value="false"/>
+									</include>
+									<label>$LOCALIZE[222]</label>
+									<onup>SetFocus(6)</onup>
+									<onleft>61</onleft>
+									<onright>6</onright>
+								</control>
+							</control>
+						</control>
+						<control type="image">
+							<width>100%</width>
+							<height>61</height>
+							<texture border="65,0,65,0" colordiffuse="context_color">dialogs/context/bottom.png</texture>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
