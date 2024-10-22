@@ -1,3 +1,7 @@
+[B]Version 21.2.0[/B]
+- Add new color picker window (making Embuary fulling compatible with Kodi 21)
+- Fix select dialog appearance
+
 [B]Version 21.1.0[/B]
 - Fix screen calibration window
 - Improve select dialog (used for instance to choose subtitles) so it can be
